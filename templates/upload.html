@@ -2,19 +2,26 @@
 <html>
   <head>
     <title>Upload Image</title>
+    <link rel="stylesheet" type="text/css" href="../static/upload.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-
-    {% if msg %}
-    <h1>{{ msg }}</h1>
+    <div class="one">
+  <div class="inside">
+     {% if msg %}
+    <h1 class="msg">{{ msg }}</h1>
     {% endif %}
     
-    <h1>Upload new File</h1>
+    <div class="heading">Upload new File
+    </div>
     
     <form method=post enctype=multipart/form-data>
-      <p><input type=file name=file>
-         <input type=submit value=Upload>
+      <input type=file name=file class="haha"><br/>
+         <input type=submit value=Upload class="btn">
     </form>
+    </div>
+</div>
+
 
     <h1>Result:</h1>
     {% if img_src %}
