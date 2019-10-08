@@ -3,8 +3,10 @@ try:
 except ImportError:
     import Image
 import pytesseract
+import Selenium,Webdriver
 
 
+driver = WebDriver.openBrowser("www.google.com")
 def ocr_core(filename):
     """
     This function will handle the core OCR processing of images.
